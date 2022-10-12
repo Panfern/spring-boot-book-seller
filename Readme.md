@@ -32,7 +32,8 @@ Content-Type: application/json
 #### Make-admin
 
 ```
-PUT /api/internal/make-admin/admin HTTP/1.1
+PUT /api/internal/make-admin/admin 
+HTTP/1.1
 Host: localhost:8080
 Authorization: Bearer InternalApiKey
 ```

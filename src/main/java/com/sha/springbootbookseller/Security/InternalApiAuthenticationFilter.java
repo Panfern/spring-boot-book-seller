@@ -34,6 +34,8 @@ public class InternalApiAuthenticationFilter extends OncePerRequestFilter
 //            System.out.println(accessKey);
 //            System.out.println(requestKey);
             if (requestKey == null || !requestKey.equals(accessKey)) {
+                logger.warn("internal key given was "+ requestKey);
+                logger.warn("real key is "+ accessKey);
                 logger.warn("internal key endpoint requested without/wrong key uri: {" + request.getRequestURI() + "}");
                 throw new RuntimeException("UNAUTHORIZED");
             }
